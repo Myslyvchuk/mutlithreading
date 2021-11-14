@@ -33,6 +33,20 @@ public class Runner {
 		t7.start();
 		t8.start();
 		
+		try {
+			t1.join();
+			t2.join();
+			t3.join();
+			t4.join();
+			t5.join();
+			t6.join();
+			t7.join();
+			t8.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		
 		System.out.println(Thread.currentThread().getName() + " has finished");
 	}
 }
